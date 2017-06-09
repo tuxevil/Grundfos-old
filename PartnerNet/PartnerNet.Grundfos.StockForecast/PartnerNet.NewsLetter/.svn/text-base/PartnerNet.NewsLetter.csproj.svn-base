@@ -1,0 +1,90 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD0E7149-6FFB-4D3D-8311-D00DE8BB1CE4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PartnerNet.NewsLetter</RootNamespace>
+    <AssemblyName>PartnerNet.NewsLetter</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.11119.20010, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\AjaxControlToolkit\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectBase.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Nybble\Redist\ProjectBase 1.0\ProjectBase.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectBase.Newsletter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Nybble\Redist\ProjectBase 1.0\ProjectBase.Newsletter.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectBase.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Nybble\Redist\ProjectBase 1.0\ProjectBase.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alert1.cs" />
+    <Compile Include="Alert2.cs" />
+    <Compile Include="Alert3.cs" />
+    <Compile Include="Alert4.cs" />
+    <Compile Include="Alert5.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControlStock.Business\PartnerNet.Business.csproj">
+      <Project>{9A85AF73-8E47-48BB-A537-6297A12CD64F}</Project>
+      <Name>PartnerNet.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlStock.Common\PartnerNet.Common.csproj">
+      <Project>{06904613-FDF5-4E4F-8C8C-BC2977DB8962}</Project>
+      <Name>PartnerNet.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlStock.Core\PartnerNet.Domain.csproj">
+      <Project>{61B5D2FC-0FC6-40FA-934A-30E7D463A48E}</Project>
+      <Name>PartnerNet.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

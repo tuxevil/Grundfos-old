@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="PartnerNet.Domain" namespace="PartnerNet.Domain">
+  <class name="TransactionHistoryWeekly" table="TransactionHistoryWeekly" >
+    <id name="Id" type="System.Int32" column="Id">
+      <generator class="identity"/>
+    </id>
+    <many-to-one name="ProductID" column="ProductID" class="Product" cascade="none" />
+    <property name="Purchase" column="Purchase" type="System.Int32" not-null="true"/>
+    <property name="PurchaseOrders" column="PurchaseOrders" type="System.Int32" not-null="true"/>
+    <property name="Sale" column="Sale" type="System.Int32" not-null="true"/>
+    <property name="Stock" column="Stock" type="System.Int32" not-null="true"/>
+    <property name="Week" column="[Week]" type="System.Int32" not-null="true"/>
+    <property name="Year" column="[Year]" type="System.Int32" not-null="true"/>
+    <property name="ProductCode" column="ProductCode" type="System.String" not-null="false"/>
+    <!--<property name="CreationUser" column="CreationUser" type="System.Guid" not-null="true"/>
+    <property name="CreationDate" column="CreationDate" type="System.DateTime" not-null="true"/>
+    <property name="ModificationUser" column="ModificationUser" type="System.Guid" not-null="true"/>
+    <property name="ModificationDate" column="ModificationDate" type="System.DateTime" not-null="true"/>-->
+  </class>
+
+	<sql-query name="sp_trans_copy">
+		<return-scalar column="result" type="Int32" />
+		exec sp_trans_copy
+	</sql-query>
+
+	<sql-query name="sp_calculo_promedios_semanales">
+		<return-scalar column="result" type="Int32" />
+		exec sp_calculo_promedios_semanales :year, :week
+	</sql-query>
+	
+</hibernate-mapping>
+

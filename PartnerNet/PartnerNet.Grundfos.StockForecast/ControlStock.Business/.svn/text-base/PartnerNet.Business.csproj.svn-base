@@ -1,0 +1,109 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A85AF73-8E47-48BB-A537-6297A12CD64F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PartnerNet.Business</RootNamespace>
+    <AssemblyName>PartnerNet.Business</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NHibernate, Version=1.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\ProjectBase 1.0\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectBase.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\ProjectBase 1.0\ProjectBase.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectBase.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\ProjectBase 1.0\ProjectBase.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AlertProductController.cs" />
+    <Compile Include="Controllers\AlertPurchaseOrderController.cs" />
+    <Compile Include="Controllers\AlertRepositionController.cs" />
+    <Compile Include="Controllers\AlertSaleOrderController.cs" />
+    <Compile Include="Controllers\AlertTotalController.cs" />
+    <Compile Include="Controllers\BreakDownController.cs" />
+    <Compile Include="Controllers\LogController.cs" />
+    <Compile Include="Controllers\CountryController.cs" />
+    <Compile Include="Controllers\ForecastController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductInformationController.cs" />
+    <Compile Include="Controllers\ProductRepositionLevelHistoryController.cs" />
+    <Compile Include="Controllers\ProductSetController.cs" />
+    <Compile Include="Controllers\ProductStatisticMonthlyController.cs" />
+    <Compile Include="Controllers\ProductStatisticWeeklyController.cs" />
+    <Compile Include="ControllerManager.cs" />
+    <Compile Include="Controllers\ProviderController.cs" />
+    <Compile Include="Controllers\PurchaseOrderController.cs" />
+    <Compile Include="Controllers\PurchaseOrderInformationController.cs" />
+    <Compile Include="Controllers\PurchaseOrderItemController.cs" />
+    <Compile Include="Controllers\PurchaseOrderItemInformationController.cs" />
+    <Compile Include="Controllers\PurchaseOrderViewScalaController.cs" />
+    <Compile Include="Controllers\TransactionHistoryMonthlyController.cs" />
+    <Compile Include="Controllers\TransactionHistoryWeeklyController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControlStock.Common\PartnerNet.Common.csproj">
+      <Project>{06904613-FDF5-4E4F-8C8C-BC2977DB8962}</Project>
+      <Name>PartnerNet.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlStock.Core\PartnerNet.Domain.csproj">
+      <Project>{61B5D2FC-0FC6-40FA-934A-30E7D463A48E}</Project>
+      <Name>PartnerNet.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlStock.GrundFos\Grundfos.ScalaConnector.csproj">
+      <Project>{EF0DB014-E4AF-4190-940F-72EBC3BA68AD}</Project>
+      <Name>Grundfos.ScalaConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Business.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

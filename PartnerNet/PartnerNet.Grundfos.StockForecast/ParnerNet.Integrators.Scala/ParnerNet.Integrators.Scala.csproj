@@ -1,0 +1,85 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C56CF077-4A68-47DA-9792-1D1D84CB2C3C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ParnerNet.Integrators.Scala</RootNamespace>
+    <AssemblyName>ParnerNet.Integrators.Scala</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NHibernate.Caches.SysCache, Version=1.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\NHibernate.Caches.SysCache.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectBase.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\ProjectBase 1.0\ProjectBase.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlertsProcessor.cs" />
+    <Compile Include="ForecastProcessor.cs" />
+    <Compile Include="IProcessor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControlStock.Business\PartnerNet.Business.csproj">
+      <Project>{9A85AF73-8E47-48BB-A537-6297A12CD64F}</Project>
+      <Name>PartnerNet.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlStock.Common\PartnerNet.Common.csproj">
+      <Project>{06904613-FDF5-4E4F-8C8C-BC2977DB8962}</Project>
+      <Name>PartnerNet.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlStock.Core\PartnerNet.Domain.csproj">
+      <Project>{61B5D2FC-0FC6-40FA-934A-30E7D463A48E}</Project>
+      <Name>PartnerNet.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlStock.GrundFos\Grundfos.ScalaConnector.csproj">
+      <Project>{EF0DB014-E4AF-4190-940F-72EBC3BA68AD}</Project>
+      <Name>Grundfos.ScalaConnector</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

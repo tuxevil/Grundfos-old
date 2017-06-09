@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="PartnerNet.Domain" namespace="PartnerNet.Domain">
+  <class name="PurchaseOrderItem" table="PurchaseOrderItem" >
+    <id name="Id" type="System.Int32" column="Id">
+      <generator class="identity"/>
+    </id>
+    <many-to-one name="Product" column="ProductID" class="Product" cascade="none" />
+    <many-to-one name="PurchaseOrder" column="PurchaseOrderID" class="PurchaseOrder" cascade="none" />
+    <many-to-one name="Forecast" column="ForecastID" class="Forecast" cascade="none" />
+    <property name="Quantity" column="Quantity" type="System.Double" not-null="true"/>
+    <property name="QuantitySuggested" column="QuantitySuggested" type="System.Int32" not-null="true" />
+    <property name="PurchaseOrderItemStatus" column="PurchaseOrderItemStatus" type="PartnerNet.Domain.PurchaseOrderItemStatus, PartnerNet.Domain" not-null="true"/>
+    <!--<property name="CreationUser" column="CreationUser" type="System.Guid" not-null="true"/>
+    <property name="CreationDate" column="CreationDate" type="System.DateTime" not-null="true"/>
+    <property name="ModificationUser" column="ModificationUser" type="System.Guid" not-null="true"/>
+    <property name="ModificationDate" column="ModificationDate" type="System.DateTime" not-null="true"/>-->
+  </class>
+</hibernate-mapping>

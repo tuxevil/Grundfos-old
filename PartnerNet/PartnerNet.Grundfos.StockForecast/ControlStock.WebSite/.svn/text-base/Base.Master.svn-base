@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Base.master.cs" Inherits="Grundfos.StockForecast.Base" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #062f59;
+}
+-->
+</style>
+<link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+<link href="styles_grundfos.css" rel="stylesheet" type="text/css">
+<script language="javascript">
+function revealModal(divID)
+{
+    window.onscroll = function () { document.getElementById(divID).style.top = document.body.scrollTop; };
+    document.getElementById(divID).style.display = "block";
+    document.getElementById(divID).style.top = document.body.scrollTop;
+}
+
+function hideModal(divID)
+{
+    document.getElementById(divID).style.display = "none";
+}
+</script>
+<script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+</head>
+<body onLoad="MM_preloadImages('../images/btn_panel2.gif','../images/btn_ordenes2.gif','../images/btn_usuarios2.gif','../images/btn_logout2.gif','../images/btn_buscar2.gif','../images/btn_agregar_sel2.gif','../images/btn_quitar_selec2.gif','../images/btn_generar_com2.gif','../images/btn_modificar_saf2.gif','../images/btn_cerrar2.gif','../images/btn_ver_desp2.gif','../images/btn_ver_fore2.gif')">
+    <form id="form1" runat="server">
+    <div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+        <td align="center">
+            <table width="1000" border="0" cellspacing="0" cellpadding="0">
+                <tr class="fdo_header">
+                <td valign="bottom">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                        <td><img src="../Images/pixel.gif" width="156" height="96"></td>
+                        <td valign="bottom"><a href=/control-panel style="cursor:pointer" onmouseout="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','../images/btn_panel2.gif',1)"><img src="../Images/btn_panel.gif" alt="Panel de Control" name="Image3" width="161" height="31" border="0"></a></td>
+                          <td valign="bottom"><a href=/product-list style="cursor:pointer" onmouseout="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','../images/btn_listadoProd2.gif',1)"><img src="../Images/btn_listadoProd.gif" alt="Listado de Productos" name="Image7" width="171" height="31" border="0"></a></td>
+                          <td valign="bottom"><a href=/purchase-order style="cursor:pointer" onmouseout="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','../images/btn_ordenes2.gif',1)"><img src="../Images/btn_ordenes.gif" alt="Ordenes de Compra Generadas" name="Image4" width="270" height="31" border="0"></a></td>
+                          <td valign="bottom"><a href=/administration/general.aspx style="cursor:pointer" onmouseout="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','../images/btn_usuarios2.gif',1)"><img src="../Images/btn_usuarios.gif" alt="Usuarios" name="Image5" width="115" height="31" border="0"></a></td>
+                          <td align="right" valign="bottom"><asp:LoginStatus ID="LoginStatus1" runat="server" LogoutImageUrl="~/images/btn_logout.gif" CssClass="text4" LoginText="Inicio de Sesión" LogoutText="Cierre de Sesión" LoginImageUrl="~/Images/btn_login.gif" /></td>
+                        </tr>
+                    </table>
+                </td>
+                </tr>
+                <tr>
+                <td bgcolor="#FFFFFF">
+                    <asp:ContentPlaceHolder ID="cphContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                </tr>
+                <tr>
+                <td><img src="../Images/fdo_footer.gif" alt="Be&gt; Think&gt; Innovate" width="1000" height="56"></td>
+                </tr>
+                <tr>
+                <td style="text-align: left; height: 38px;"><table width=100%>
+                <tr>
+                <td style="text-align: left">
+                    <asp:LoginName ID="LoginName1" runat="server" CssClass="text2" />
+                </td>
+                <td style="text-align: right">
+                    &nbsp;<asp:Label ID="Label2" runat="server" CssClass="text3"></asp:Label></td>
+                </tr>
+                <tr>
+                <td>
+                    <asp:LinkButton ID="btnCambiarContraseña" runat="server" CssClass="text2" OnClick="btnCambiarContraseña_Click">Cambiar Contraseña</asp:LinkButton></td>
+                <td style="text-align: right">
+                    <asp:Label ID="lblUltimoForecast" runat="server" CssClass="text2"></asp:Label></td>
+                </tr>
+                </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        </tr>
+    </table>
+    </div>
+    </form>
+</body>
+</html>

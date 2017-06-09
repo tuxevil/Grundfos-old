@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="PartnerNet.Domain" namespace="PartnerNet.Domain">
+  <class name="BreakDown" table="BreakDown" >
+    <id name="Id" type="System.Int32" column="Id">
+      <generator class="identity"/>
+    </id>
+    <many-to-one name="Product" column="ProductID" class="Product" cascade="none" />
+    <many-to-one name="Part" column="PartID" class="Product" cascade="none" />
+    <property name="Quantity" column="Quantity" type="System.Int32" not-null="false"/>
+
+    <!--<property name="CreationUser" column="CreationUser" type="System.Guid" not-null="false"/>
+    <property name="CreationDate" column="CreationDate" type="System.DateTime" not-null="false"/>
+    <property name="ModificationUser" column="ModificationUser" type="System.Guid" not-null="false"/>
+    <property name="ModificationDate" column="ModificationDate" type="System.DateTime" not-null="false"/>-->
+  </class>
+  <sql-query name="sp_despiece">
+    <return-scalar column="producto" type="Int32" />
+    <return-scalar column="cantidad" type="Int32" />
+    exec sp_despiece :ProductID,:Quantity
+  </sql-query>
+</hibernate-mapping>

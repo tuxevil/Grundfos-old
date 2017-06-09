@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="PartnerNet.Domain" namespace="PartnerNet.Domain">
+  <class name="AlertReposition" table="AlertReposition" >
+    <id name="Id" type="System.Int32" column="Id">
+      <generator class="identity"/>
+    </id>
+    <many-to-one name="Product" column="ProductId" class="Product" cascade="none" />
+    <property name="Sales" column="Sales" type="System.Int32" not-null="true"/>
+    <property name="Result" column="Result" type="System.Decimal" not-null="true"/>
+    <property name="IsConflicted" column="IsConflicted" type="System.Boolean" not-null="true" />
+    <property name="OrderInfo" column="OrderInfo" type="System.String" not-null="false" length="256"/>
+    <property name="ProductSaleLife" column="ProductSaleLife" type="System.Decimal" not-null="false"/>
+  </class>
+  <sql-query name="sp_alertreposition_clean">
+    <return-scalar column="result" type="Int32" />
+    exec sp_alertreposition_clean
+  </sql-query>
+
+</hibernate-mapping>

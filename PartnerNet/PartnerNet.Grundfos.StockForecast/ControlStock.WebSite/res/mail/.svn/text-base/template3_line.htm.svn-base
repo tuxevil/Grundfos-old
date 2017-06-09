@@ -1,0 +1,10 @@
+                <tr>
+                    <td width="100px">
+                        [PRODUCTCODE]</td>
+                    <td width="100px">
+                        [STANDARDCOST]</td>
+                    <td width="100px">
+                        [SUBTOTAL]</td>
+                    <td width="100px">
+                        [QUANTITY]</td>
+                </tr>

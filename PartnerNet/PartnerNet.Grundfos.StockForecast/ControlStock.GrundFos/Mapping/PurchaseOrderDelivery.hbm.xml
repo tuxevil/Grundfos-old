@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Grundfos.ScalaConnector" namespace="Grundfos.ScalaConnector">
+  <class name="PurchaseOrderDelivery" table="SC110100" >
+    <composite-id>
+      <key-many-to-one name="PurchaseOrder" column="SC11003" class="PurchaseOrder" />
+      <key-many-to-one name="Product" column="SC11001" class="Product"  />
+      <key-property name="DeliveryDate" column="SC11002" type="System.DateTime" />
+      <key-property name="Temp" column="SC11004" type="System.String" />
+      <key-property name="OrderLine" column="SC11012" type="System.String" />
+      <key-property name="DeliveryType" column="SC11019" type="System.String" />
+    </composite-id>
+    <many-to-one name="Provider" column="SC11006" class="Provider"  />
+    <property name="ProviderStatus" column="SC11007" type="System.String" />
+  </class>
+</hibernate-mapping>

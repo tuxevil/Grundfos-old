@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/nybble/!svn/ver/3181/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping
+END
+AlertTotal.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/nybble/!svn/ver/406/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/AlertTotal.hbm.xml
+END
+BreakDown.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/BreakDown.hbm.xml
+END
+ProductViewScala.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/nybble/!svn/ver/406/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/ProductViewScala.hbm.xml
+END
+Product.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/nybble/!svn/ver/3140/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/Product.hbm.xml
+END
+Log.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/Log.hbm.xml
+END
+TransactionHistoryMonthly.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/TransactionHistoryMonthly.hbm.xml
+END
+ProductStatisticMonthly.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/ProductStatisticMonthly.hbm.xml
+END
+AlertReposition.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/nybble/!svn/ver/3181/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/AlertReposition.hbm.xml
+END
+PurchaseOrderItem.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/PurchaseOrderItem.hbm.xml
+END
+TransactionHistoryWeekly.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/TransactionHistoryWeekly.hbm.xml
+END
+ProductStatisticWeekly.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/ProductStatisticWeekly.hbm.xml
+END
+Provider.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/nybble/!svn/ver/3140/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/Provider.hbm.xml
+END
+TransactionHistoryWeeklyCurrent.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/TransactionHistoryWeeklyCurrent.hbm.xml
+END
+ProductSet.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/ProductSet.hbm.xml
+END
+AlertPurchaseOrder.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/nybble/!svn/ver/3164/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/AlertPurchaseOrder.hbm.xml
+END
+ProductDetailViewScala.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/ProductDetailViewScala.hbm.xml
+END
+Country.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/Country.hbm.xml
+END
+PurchaseOrderViewScala.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/PurchaseOrderViewScala.hbm.xml
+END
+PurchaseOrder.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/PurchaseOrder.hbm.xml
+END
+Forecast.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/Forecast.hbm.xml
+END
+ProductRepositionLevelHistory.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/nybble/!svn/ver/2838/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/ProductRepositionLevelHistory.hbm.xml
+END
+AlertSaleOrder.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/nybble/!svn/ver/3164/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/AlertSaleOrder.hbm.xml
+END
+AlertProduct.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Core/Mapping/AlertProduct.hbm.xml
+END

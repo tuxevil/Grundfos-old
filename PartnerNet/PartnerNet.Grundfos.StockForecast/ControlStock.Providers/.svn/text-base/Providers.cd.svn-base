@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="PartnerNet.Providers.Stock.StockProvider">
+    <Position X="4.75" Y="2.25" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Stock\StockProvider.cs</FileName>
+      <HashCode>QAAAAAAIIAAEAAAAIAIAAAAAAAAAIAAAAAAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PartnerNet.Providers.Stock.StockProviderCollection">
+    <Position X="8" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Stock\StockProvider.cs</FileName>
+      <HashCode>AAIAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

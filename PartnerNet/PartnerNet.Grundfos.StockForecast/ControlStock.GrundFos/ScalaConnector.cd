@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Grundfos.ScalaConnector.Controllers.SaleOrderItemController">
+    <Position X="9.25" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controllers\SaleOrderItemController.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Grundfos.ScalaConnector.Controllers.ProductController">
+    <Position X="0.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controllers\ProductController.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Grundfos.ScalaConnector.Controllers.ProductDetailController">
+    <Position X="3" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controllers\ProductDetailController.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Grundfos.ScalaConnector.Controllers.ProviderController">
+    <Position X="3" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controllers\ProviderController.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Grundfos.ScalaConnector.Controllers.PurchaseOrderController">
+    <Position X="6.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controllers\PurchaseOrderController.cs</FileName>
+      <HashCode>AAAAAgAAAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Grundfos.ScalaConnector.Controllers.PurchaseOrderItemController">
+    <Position X="9.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controllers\PurchaseOrderItemController.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Grundfos.ScalaConnector.Controllers.SaleOrderController">
+    <Position X="6.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>Controllers\SaleOrderController.cs</FileName>
+      <HashCode>AAAAAgAAAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

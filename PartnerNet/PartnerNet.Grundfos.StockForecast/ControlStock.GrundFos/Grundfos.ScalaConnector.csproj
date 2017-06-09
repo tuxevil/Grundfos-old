@@ -1,0 +1,132 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF0DB014-E4AF-4190-940F-72EBC3BA68AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Grundfos.ScalaConnector</RootNamespace>
+    <AssemblyName>Grundfos.ScalaConnector</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NHibernate, Version=1.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\ProjectBase 1.0\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Caches.SysCache, Version=2.1.0.4000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\NHibernate.Caches.SysCache.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectBase.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\ProjectBase 1.0\ProjectBase.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectBase.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\ProjectBase 1.0\ProjectBase.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControllerManager.cs" />
+    <Compile Include="Controllers\ProductPartsController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductDetailController.cs" />
+    <Compile Include="Controllers\ProviderController.cs" />
+    <Compile Include="Controllers\PurchaseOrderController.cs" />
+    <Compile Include="Controllers\PurchaseOrderItemController.cs" />
+    <Compile Include="Controllers\SaleOrderController.cs" />
+    <Compile Include="Controllers\SaleOrderItemController.cs" />
+    <Compile Include="Controllers\TransactionsController.cs" />
+    <Compile Include="Entities\ProductParts.cs" />
+    <Compile Include="Entities\PurchaseOrderDelivery.cs" />
+    <Compile Include="Entities\PurchaseOrderItem.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\PurchaseOrder.cs" />
+    <Compile Include="Entities\SaleOrder.cs" />
+    <Compile Include="Entities\SaleOrderItem.cs" />
+    <Compile Include="Entities\ProductDetail.cs" />
+    <Compile Include="Entities\Stock.cs" />
+    <Compile Include="Entities\Transactions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entities\Provider.cs" />
+    <Compile Include="Providers\ScalaStockProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControlStock.Common\PartnerNet.Common.csproj">
+      <Project>{06904613-FDF5-4E4F-8C8C-BC2977DB8962}</Project>
+      <Name>PartnerNet.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlStock.Core\PartnerNet.Domain.csproj">
+      <Project>{61B5D2FC-0FC6-40FA-934A-30E7D463A48E}</Project>
+      <Name>PartnerNet.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlStock.Providers\PartnerNet.Providers.csproj">
+      <Project>{CDCBD2B3-E4D3-4549-8ACD-2E95E1CF4316}</Project>
+      <Name>PartnerNet.Providers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Entities\Scala Model.cd" />
+    <None Include="ScalaConnector.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\ProductDetail.hbm.xml" />
+    <EmbeddedResource Include="Mapping\PurchaseOrder.hbm.xml" />
+    <EmbeddedResource Include="Mapping\PurchaseOrderItem.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Product.hbm.xml" />
+    <EmbeddedResource Include="Mapping\Provider.hbm.xml" />
+    <EmbeddedResource Include="Mapping\SaleOrder.hbm.xml" />
+    <EmbeddedResource Include="Mapping\SaleOrderItem.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\Transactions.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\Stock.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\PurchaseOrderDelivery.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\ProductParts.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

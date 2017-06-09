@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="PartnerNet.Domain" namespace="PartnerNet.Domain">
+  <class name="TransactionHistoryWeeklyCurrent" table="TransactionHistoryWeeklyCurrent" >
+    <id name="Id" type="System.Int32" column="Id">
+      <generator class="identity"/>
+    </id>
+    <many-to-one name="ProductID" column="ProductID" class="Product" cascade="none" />
+    <property name="Purchase" column="Purchase" type="System.Int32" not-null="true"/>
+    <property name="PurchaseOrders" column="PurchaseOrders" type="System.Int32" not-null="true"/>
+    <property name="Sale" column="Sale" type="System.Int32" not-null="true"/>
+    <property name="Stock" column="Stock" type="System.Int32" not-null="true"/>
+    <property name="Week" column="[Week]" type="System.Int32" not-null="true"/>
+    <property name="Year" column="[Year]" type="System.Int32" not-null="true"/>
+    <property name="ProductCode" column="ProductCode" type="System.String" not-null="false"/>
+  </class>
+</hibernate-mapping>
+

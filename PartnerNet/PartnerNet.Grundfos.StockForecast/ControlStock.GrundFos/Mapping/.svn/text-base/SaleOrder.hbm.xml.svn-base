@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Grundfos.ScalaConnector" namespace="Grundfos.ScalaConnector">
+  <class name="SaleOrder" table="OR010100" >
+    <id name="Id" type="System.String" column="OR01001">
+      <generator class="assigned"/>
+    </id>
+    <!--<bag name="OrderItems" table="OR030100" lazy="true" cascade="none">
+      <key column="OR03001" />
+      <one-to-many class="SaleOrderItem" />
+    </bag>-->
+    <property name="Date" column="OR01015" type="System.DateTime" not-null="true"/>
+    <property name="CustomerCode" column="OR01003" type="System.String" not-null="true"/>
+    <property name="Location" column="OR01050" type="System.String" not-null="true"/>
+  </class>
+</hibernate-mapping>

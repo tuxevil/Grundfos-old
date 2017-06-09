@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/nybble/!svn/ver/3149/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.GrundFos/Entities
+END
+SaleOrderItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/nybble/!svn/ver/3572/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.GrundFos/Entities/SaleOrderItem.cs
+END
+Product.cs
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/nybble/!svn/ver/3149/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.GrundFos/Entities/Product.cs
+END
+SaleOrder.cs
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.GrundFos/Entities/SaleOrder.cs
+END
+ProductDetail.cs
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.GrundFos/Entities/ProductDetail.cs
+END
+Stock.cs
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.GrundFos/Entities/Stock.cs
+END
+PurchaseOrderItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.GrundFos/Entities/PurchaseOrderItem.cs
+END
+Scala Model.cd
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.GrundFos/Entities/Scala%20Model.cd
+END
+PurchaseOrder.cs
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.GrundFos/Entities/PurchaseOrder.cs
+END
+Transactions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.GrundFos/Entities/Transactions.cs
+END
+Provider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/nybble/!svn/ver/3140/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.GrundFos/Entities/Provider.cs
+END
+PurchaseOrderDelivery.cs
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.GrundFos/Entities/PurchaseOrderDelivery.cs
+END
+ProductParts.cs
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/nybble/!svn/ver/3149/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.GrundFos/Entities/ProductParts.cs
+END

@@ -1,0 +1,21 @@
+# Microsoft Developer Studio Project File - Database Project
+Begin DataProject = "Database"
+   MSDTVersion = "80"
+   Begin Folder = "01.DEV"
+      Begin Folder = "V1.0.16"
+         Script = "alerttotal create.sql"
+         Script = "mod vista.sql"
+      End
+      Begin Folder = "v1.1.8"
+         Script = "Update.sql"
+      End
+      Begin Folder = "V1.2"
+      End
+   End
+   Begin Folder = "02.QA"
+   End
+   Begin Folder = "03.PRD"
+   End
+   Begin DBRefFolder = "Database References"
+   End
+End

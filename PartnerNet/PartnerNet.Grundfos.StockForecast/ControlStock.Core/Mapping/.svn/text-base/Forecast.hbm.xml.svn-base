@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="PartnerNet.Domain" namespace="PartnerNet.Domain">
+  <class name="Forecast" table="Forecast" >
+    <id name="Id" type="System.Int32" column="Id">
+      <generator class="identity"/>
+    </id>
+    <many-to-one name="Product" column="ProductID" class="Product" cascade="none" />
+    <property name="Stock" column="Stock" type="System.Int32" not-null="true"/>
+    <property name="Week" column="Week" type="System.Int32" not-null="true"/>
+    <property name="Year" column="Year" type="System.Int32" not-null="true"/>
+    <property name="Sale" column="Sale" type="System.Int32" not-null="true"/>
+    <property name="QuantitySuggested" column="QuantitySuggested" type="System.Int32" not-null="true"/>
+    <property name="ProcessedOn" column="ProcessedOn" type="System.Int32" not-null="true"/>
+    <property name="Purchase" column="Purchase" type="System.Int32" not-null="true"/>
+    <property name="FinalStock" column="FinalStock" type="System.Int32" not-null="true"/>
+    <property name="Safety" column="Safety" type="System.Int32" not-null="true"/>
+    <property name="SafetyCoEf" column="SafetyCoEf" type="System.Int32" not-null="true"/>
+  </class>
+
+	<sql-query name="sp_forecast_clean">
+		<return-scalar column="result" type="Int32" />
+		exec sp_forecast_clean :Week,:Year
+	</sql-query>
+</hibernate-mapping>

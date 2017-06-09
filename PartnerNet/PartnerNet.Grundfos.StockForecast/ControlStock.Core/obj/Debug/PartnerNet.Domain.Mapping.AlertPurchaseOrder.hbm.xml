@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="PartnerNet.Domain" namespace="PartnerNet.Domain">
+  <class name="AlertPurchaseOrder" table="AlertPurchaseOrder" >
+    <id name="Id" type="System.Int32" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="PurchaseOrderCode" column="PurchaseOrderCode" type="System.String" not-null="true"/>
+    <property name="PurchaseOrderItemCode" column="PurchaseOrderItemCode" type="System.String" not-null="true"/>
+    <property name="PurchaseOrderProviderCode" column="PurchaseOrderProviderCode" type="System.String" not-null="true"/>
+    <property name="PurchaseOrderProviderName" column="PurchaseOrderProviderName" type="System.String" not-null="true"/>
+    <property name="Quantity" column="Quantity" type="System.Int32" not-null="true"/>
+    <property name="Type" column="Type" type="PartnerNet.Domain.AlertPurchaseOrderType, PartnerNet.Domain" not-null="true"/>
+    <property name="GAP" column="GAP" type="System.Int32" not-null="true"/>
+    <property name="WayOfDelivery" column="WayOfDelivery" type="PartnerNet.Domain.WayOfDelivery, PartnerNet.Domain" not-null="true"/>
+    <property name="Destination" column="Destination" type="PartnerNet.Domain.AlertPurchaseOrderDestination, PartnerNet.Domain" not-null="true"/>
+    <property name="ArrivalDate" column="ArrivalDate" type="System.DateTime" not-null="true"/>
+    <property name="CalculatedArrivalDate" column="CalculatedArrivalDate" type="System.DateTime" not-null="false"/>
+  </class>
+  <sql-query name="sp_alertpurchaseorder_clean">
+    <return-scalar column="result" type="Int32" />
+    exec sp_alertpurchaseorder_clean
+  </sql-query>
+  
+</hibernate-mapping>

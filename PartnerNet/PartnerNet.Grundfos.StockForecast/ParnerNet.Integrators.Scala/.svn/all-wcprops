@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/nybble/!svn/ver/3196/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ParnerNet.Integrators.Scala
+END
+ParnerNet.Integrators.Scala.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/nybble/!svn/ver/3545/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ParnerNet.Integrators.Scala/ParnerNet.Integrators.Scala.csproj
+END
+ForecastProcessor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/nybble/!svn/ver/3187/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ParnerNet.Integrators.Scala/ForecastProcessor.cs
+END
+IProcessor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ParnerNet.Integrators.Scala/IProcessor.cs
+END
+AlertsProcessor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/nybble/!svn/ver/3572/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ParnerNet.Integrators.Scala/AlertsProcessor.cs
+END

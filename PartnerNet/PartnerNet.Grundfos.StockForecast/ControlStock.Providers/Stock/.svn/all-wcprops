@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Providers/Stock
+END
+StockManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Providers/Stock/StockManager.cs
+END
+StockProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Providers/Stock/StockProvider.cs
+END
+StockProviderConfiguration.cs
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/nybble/!svn/ver/34/GrundFos/Grundfos.StockForecast/PartnerNet.Grundfos.StockForecast/trunk/ControlStock.Providers/Stock/StockProviderConfiguration.cs
+END

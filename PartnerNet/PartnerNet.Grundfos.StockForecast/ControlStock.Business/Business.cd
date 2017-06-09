@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="PartnerNet.Business.ForecastController">
+    <Position X="8.75" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Controllers\ForecastController.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PartnerNet.Business.TransactionHistoryWeeklyController">
+    <Position X="1" Y="4.75" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Controllers\TransactionHistoryWeeklyController.cs</FileName>
+      <HashCode>AAAAAAIAAAAAAEAAAAAAAEAAAAAgAAAAAAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PartnerNet.Business.ProductController">
+    <Position X="8.75" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Controllers\ProductController.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PartnerNet.Business.ProductStatisticMonthlyController">
+    <Position X="3.75" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Controllers\ProductStatisticMonthlyController.cs</FileName>
+      <NewMemberFileName>Controllers\ProductStatisticWeeklyController.cs</NewMemberFileName>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PartnerNet.Business.ProductViewController">
+    <Position X="6.25" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Controllers\ProductViewController.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PartnerNet.Business.PurchaseOrderController">
+    <Position X="6.25" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Controllers\PurchaseOrderController.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PartnerNet.Business.TransactionHistoryMonthlyController">
+    <Position X="3.75" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Controllers\TransactionHistoryMonthlyController.cs</FileName>
+      <HashCode>AAAAAAIAAAAAAEAAAAAAAEAAAAAgAAAAAAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PartnerNet.Business.ControllerManager">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ControllerManager.cs</FileName>
+      <HashCode>ACCCAAAAAAAAAAAABAAAAAACAAQAiAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PartnerNet.Business.ProductStatisticWeeklyController">
+    <Position X="1" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Controllers\ProductStatisticWeeklyController.cs</FileName>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

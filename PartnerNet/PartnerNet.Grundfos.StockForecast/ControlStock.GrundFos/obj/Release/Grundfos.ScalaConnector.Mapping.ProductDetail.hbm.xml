@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Grundfos.ScalaConnector" namespace="Grundfos.ScalaConnector">
+  <class name="ProductDetail" table="SC030100" >
+    <composite-id>
+      <key-many-to-one name="Product" column="SC03001" class="Product" />
+      <key-property name="Location" column="SC03002" type="System.String"  />
+    </composite-id>
+    <many-to-one name="Product" column="SC03001" class="Product" />
+    <property name="Location" column="SC03002" type="System.String" not-null="true"/>
+    <property name="Stock" column="SC03003" type="System.Int32" not-null="true"/>
+    <property name="Sales1" column="SC03004" type="System.Int32" not-null="true"/>
+    <property name="Sales2" column="SC03005" type="System.Int32" not-null="true"/>
+    <property name="Purchases" column="SC03006" type="System.Int32" not-null="true"/>
+    <property name="Leadtime" column="SC03008" type="System.Int32" not-null="true"/>
+    <property name="PurchaseMod" column="SC03011" type="System.Int32" not-null="true"/>
+    <property name="RepPoint" column="SC03010" type="System.Int32" not-null="true"/>
+    <property name="StandardCost" column="SC03058" type="System.Double" not-null="true"/>
+  </class>
+</hibernate-mapping>

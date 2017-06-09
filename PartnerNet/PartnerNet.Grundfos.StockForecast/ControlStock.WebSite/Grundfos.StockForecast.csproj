@@ -1,0 +1,642 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{39075640-FA8C-46D3-B35A-E866087823CB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Grundfos.StockForecast</RootNamespace>
+    <AssemblyName>Grundfos.StockForecast</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.11119.20010, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\AjaxControlToolkit\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy, Version=1.1.5.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\ProjectBase 1.0\Castle.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=1.0.0.2, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\ProjectBase 1.0\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Program Files\Common Files\Business Objects\2.7\Managed\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Program Files\Common Files\Business Objects\2.7\Managed\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Program Files\Common Files\Business Objects\2.7\Managed\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Program Files\Common Files\Business Objects\2.7\Managed\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="dotnetCHARTING, Version=5.1.3169.27816, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\dotnetCHARTING.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\ProjectBase 1.0\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\ProjectBase 1.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="netchartdir, Version=4.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\netchartdir.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=1.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Nybble\Redist\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Caches.SysCache, Version=1.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\NHibernate.Caches.SysCache.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectBase.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Nybble\Redist\ProjectBase 1.0\ProjectBase.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectBase.Newsletter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Nybble\Redist\ProjectBase 1.0\ProjectBase.Newsletter.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectBase.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Nybble\Redist\ProjectBase 1.0\ProjectBase.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="RssToolkit, Version=1.0.0.1, Culture=neutral, PublicKeyToken=02e47a85b237026a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\RssToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.XML.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <HintPath>..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <HintPath>..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <HintPath>..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.EnterpriseServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mobile">
+      <HintPath>..\..\..\..\..\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Web.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <HintPath>..\..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET 2.0 AJAX Extensions\v1.0.61025\System.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UrlRewritingNet.UrlRewriter, Version=2.0.60829.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Nybble\Redist\UrlRewritingNet.UrlRewriter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="administration\usersmail.aspx.cs">
+      <DependentUpon>usersmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administration\usersmail.aspx.designer.cs">
+      <DependentUpon>usersmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="administration\general.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>general.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="administration\general.aspx.designer.cs">
+      <DependentUpon>general.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\MembershipUserODS.cs" />
+    <Content Include="App_Code\MembershipUserWrapper.cs" />
+    <Content Include="App_Code\RoleDataObject.cs" />
+    <Compile Include="App_GlobalResources\translation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>translation.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Base.Master.cs">
+      <DependentUpon>Base.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base.Master.designer.cs">
+      <DependentUpon>Base.Master</DependentUpon>
+    </Compile>
+    <Compile Include="breakdown\default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="breakdown\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control-panel\default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control-panel\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control-panel\details.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control-panel\details.aspx.designer.cs">
+      <DependentUpon>details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forecast\default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forecast\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product-list\default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product-list\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product-list\export.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product-list\export.aspx.designer.cs">
+      <DependentUpon>export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product-list\report.aspx.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product-list\report.aspx.designer.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="purchase-order\default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase-order\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="purchase-order\report.aspx.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="purchase-order\report.aspx.designer.cs">
+      <DependentUpon>report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepLevelAudit.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>RepLevelAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepLevelAudit.aspx.designer.cs">
+      <DependentUpon>RepLevelAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportesordcompras.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>reportesordcompras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportesordcompras.aspx.designer.cs">
+      <DependentUpon>reportesordcompras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reports\rptListProductos-det.cs">
+      <DependentUpon>rptListProductos-det.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="reports\rptListProductos.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptListProductos.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="reports\rptOrdCompras.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptOrdCompras.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="services.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="services.aspx.designer.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Detalle.ascx.cs">
+      <DependentUpon>Detalle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Detalle.ascx.designer.cs">
+      <DependentUpon>Detalle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\DetalleOC.ascx.cs">
+      <DependentUpon>DetalleOC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\DetalleOC.ascx.designer.cs">
+      <DependentUpon>DetalleOC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\Pager.ascx.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\Pager.ascx.designer.cs">
+      <DependentUpon>Pager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="administration\newuser.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>newuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="administration\newuser.aspx.designer.cs">
+      <DependentUpon>newuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\password.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="users\password.aspx.designer.cs">
+      <DependentUpon>password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeekNumber.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WebNHibernate.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Base.Master" />
+    <Content Include="default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControlStock.Business\PartnerNet.Business.csproj">
+      <Project>{9A85AF73-8E47-48BB-A537-6297A12CD64F}</Project>
+      <Name>PartnerNet.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlStock.Common\PartnerNet.Common.csproj">
+      <Project>{06904613-FDF5-4E4F-8C8C-BC2977DB8962}</Project>
+      <Name>PartnerNet.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlStock.Core\PartnerNet.Domain.csproj">
+      <Project>{61B5D2FC-0FC6-40FA-934A-30E7D463A48E}</Project>
+      <Name>PartnerNet.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlStock.GrundFos\Grundfos.ScalaConnector.csproj">
+      <Project>{EF0DB014-E4AF-4190-940F-72EBC3BA68AD}</Project>
+      <Name>Grundfos.ScalaConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlStock.Providers\PartnerNet.Providers.csproj">
+      <Project>{CDCBD2B3-E4D3-4549-8ACD-2E95E1CF4316}</Project>
+      <Name>PartnerNet.Providers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ParnerNet.Integrators.Scala\ParnerNet.Integrators.Scala.csproj">
+      <Project>{C56CF077-4A68-47DA-9792-1D1D84CB2C3C}</Project>
+      <Name>ParnerNet.Integrators.Scala</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PartnerNet.NewsLetter\PartnerNet.NewsLetter.csproj">
+      <Project>{DD0E7149-6FFB-4D3D-8311-D00DE8BB1CE4}</Project>
+      <Name>PartnerNet.NewsLetter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\translation.resx">
+      <SubType>Designer</SubType>
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>translation.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="error.aspx" />
+    <Content Include="Images\3floppy_mount.ico" />
+    <Content Include="Images\3floppy_unmount.ico" />
+    <Content Include="Images\btn_agregar_sel.gif" />
+    <Content Include="Images\btn_agregar_sel2.gif" />
+    <Content Include="Images\btn_buscar.gif" />
+    <Content Include="Images\btn_buscar2.gif" />
+    <Content Include="Images\btn_cancelar_oc.gif" />
+    <Content Include="Images\btn_cancelar_oc2.gif" />
+    <Content Include="Images\btn_canc_oc_s.gif" />
+    <Content Include="Images\btn_canc_oc_s2.gif" />
+    <Content Include="Images\btn_cerrar.gif" />
+    <Content Include="Images\btn_cerrar2.gif" />
+    <Content Include="Images\btn_exp_oc.gif" />
+    <Content Include="Images\btn_exp_oc2.gif" />
+    <Content Include="Images\btn_generar_com.gif" />
+    <Content Include="Images\btn_generar_com2.gif" />
+    <Content Include="Images\btn_imp_oc.gif" />
+    <Content Include="Images\btn_imp_oc2.gif" />
+    <Content Include="Images\btn_imp_oc_s-07.gif" />
+    <Content Include="Images\btn_imp_oc_s.gif" />
+    <Content Include="Images\btn_imp_oc_s2-07.gif" />
+    <Content Include="Images\btn_imp_oc_s2.gif" />
+    <Content Include="Images\btn_listadoProd.gif" />
+    <Content Include="Images\btn_listadoProd2.gif" />
+    <Content Include="Images\btn_logout.gif" />
+    <Content Include="Images\btn_logout2.gif" />
+    <Content Include="Images\btn_modificar_saf.gif" />
+    <Content Include="Images\btn_modificar_saf2.gif" />
+    <Content Include="Images\btn_op_filt.gif" />
+    <Content Include="Images\btn_op_filt2.gif" />
+    <Content Include="Images\btn_ordenes.gif" />
+    <Content Include="Images\btn_ordenes2.gif" />
+    <Content Include="Images\btn_panel.gif" />
+    <Content Include="Images\btn_panel2.gif" />
+    <Content Include="Images\btn_quitar_selec.gif" />
+    <Content Include="Images\btn_quitar_selec2.gif" />
+    <Content Include="Images\btn_usuarios.gif" />
+    <Content Include="Images\btn_usuarios2.gif" />
+    <Content Include="Images\btn_ver_desp.gif" />
+    <Content Include="Images\btn_ver_desp2.gif" />
+    <Content Include="Images\btn_ver_fore.gif" />
+    <Content Include="Images\btn_ver_fore2.gif" />
+    <Content Include="Images\btn_volver.gif" />
+    <Content Include="Images\btn_volver2.gif" />
+    <Content Include="Images\control_adelante.gif" />
+    <Content Include="Images\control_adelante2.gif" />
+    <Content Include="Images\control_atras.gif" />
+    <Content Include="Images\control_atras2.gif" />
+    <Content Include="Images\control_fdo.gif" />
+    <Content Include="Images\control_final.gif" />
+    <Content Include="Images\control_final2.gif" />
+    <Content Include="Images\control_inicio.gif" />
+    <Content Include="Images\control_inicio2.gif" />
+    <Content Include="Images\cuadro.gif" />
+    <Content Include="Images\fdo_footer.gif" />
+    <Content Include="Images\fdo_header.gif" />
+    <Content Include="Images\fdo_tit.gif" />
+    <Content Include="Images\fin_tabla_busq.gif" />
+    <Content Include="Images\first.GIF" />
+    <Content Include="Images\f_anterior.gif" />
+    <Content Include="Images\f_siguiente.gif" />
+    <Content Include="Images\last.GIF" />
+    <Content Include="Images\linea_abajo.gif" />
+    <Content Include="Images\linea_arriba.gif" />
+    <Content Include="Images\logo3.JPG" />
+    <Content Include="Images\logochico.JPG" />
+    <Content Include="Images\minus.gif" />
+    <Content Include="Images\next.GIF" />
+    <Content Include="Images\pixel.gif" />
+    <Content Include="Images\plus.gif" />
+    <Content Include="Images\prev.GIF" />
+    <Content Include="Images\tit_listado_articulos.gif" />
+    <Content Include="Images\whiteCollapseIcon.gif" />
+    <Content Include="Images\whiteExpandIcon.gif" />
+    <Content Include="reportesordcompras.aspx" />
+    <Content Include="services.aspx" />
+    <Content Include="StyleSheet.css" />
+    <Content Include="styles_grundfos.css" />
+    <Content Include="Templates\Detalle.ascx" />
+    <Content Include="Templates\DetalleOC.ascx" />
+    <Content Include="Templates\Pager.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="forecast\default.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="product-list\default.aspx" />
+    <Content Include="purchase-order\default.aspx" />
+    <Content Include="reports\rptOrdCompras.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptOrdCompras.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="administration\general.aspx" />
+    <Content Include="breakdown\default.aspx" />
+    <Content Include="forecast\web.config" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\btn_login.gif" />
+    <Content Include="Images\btn_login2.gif" />
+    <Content Include="Images\Cancel2.png" />
+    <Content Include="Images\ErrorCircle.png" />
+    <Content Include="Images\OKShield.png" />
+    <Content Include="Images\Search.png" />
+    <Content Include="product-list\report.aspx" />
+    <Content Include="product-list\web.config" />
+    <Content Include="purchase-order\report.aspx" />
+    <Content Include="purchase-order\web.config" />
+    <Content Include="breakdown\web.config" />
+    <Content Include="administration\newuser.aspx" />
+    <Content Include="administration\web.config" />
+    <Content Include="users\password.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="control-panel\default.aspx" />
+    <Content Include="control-panel\details.aspx" />
+    <Content Include="reports\rptListProductos-det.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListProductos-det.cs</LastGenOutput>
+    </Content>
+    <Content Include="reports\rptListProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListProductos.cs</LastGenOutput>
+    </Content>
+    <Content Include="ScalaNHibernate.config" />
+    <Content Include="users\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="administration\usersmail.aspx" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\CSs\default.css" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\html\calendar.html" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\html\calendarbottom.html" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\html\calendartop.html" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\html\crystalexportdialog.htm" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\html\crystalprinthost.html" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\calendar.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\crlogo.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\export.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\exportd.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\export_over.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\First.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\Firstd.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\first_over.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\gotopage.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\gotopaged.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\gotopage_over.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\grouptree.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\grouptreed.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\grouptreepressed.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\grouptree_over.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\Last.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\Lastd.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\last_over.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\Next.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\Nextd.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\next_over.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\Prev.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\Prevd.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\prev_over.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\print.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\printd.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\print_over.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\Refresh.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\refreshd.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\refresh_over.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\Search.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\searchd.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\search_over.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\up.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\upd.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\toolbar\up_over.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\begindots.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\beginminus.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\beginplus.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\blank.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\blankdots.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\dots.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\lastdots.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\lastminus.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\lastplus.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\Magnify.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\minus.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\Minusbox.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\plus.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\Plusbox.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\singleminus.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\images\Tree\singleplus.gif" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\calendar_param.js" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\dt_param.js" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\export.js" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\KeyDownEvent.js" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\print.js" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\prompts_param.js" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_chs.js" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_cht.js" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_de.js" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_en.js" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_es.js" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_fr.js" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_it.js" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_ja.js" />
+    <Content Include="aspnet_client\System_Web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_ko.js" />
+    <Content Include="control-panel\web.config" />
+    <Content Include="Images\btn_imp_listaprod.gif" />
+    <Content Include="Images\btn_imp_listaprod2.gif" />
+    <Content Include="Images\btn_imp_lp.gif" />
+    <Content Include="Images\btn_imp_lp2.gif" />
+    <Content Include="Images\SearchSmall.png" />
+    <Content Include="js\jquery-1.2.6.min.js" />
+    <Content Include="product-list\export.aspx" />
+    <Content Include="RepLevelAudit.aspx" />
+    <Content Include="res\mail\common.htm" />
+    <Content Include="res\mail\template1.htm" />
+    <Content Include="res\mail\template1_line.htm" />
+    <Content Include="res\mail\template2.htm" />
+    <Content Include="res\mail\template2_line.htm" />
+    <Content Include="res\mail\template3.htm" />
+    <Content Include="res\mail\template3_line.htm" />
+    <Content Include="res\mail\template4.htm" />
+    <Content Include="res\mail\template4_line.htm" />
+    <Content Include="res\mail\template5.htm" />
+    <Content Include="res\mail\template5_line.htm" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v8.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2147</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Grundfos.StockForecast</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

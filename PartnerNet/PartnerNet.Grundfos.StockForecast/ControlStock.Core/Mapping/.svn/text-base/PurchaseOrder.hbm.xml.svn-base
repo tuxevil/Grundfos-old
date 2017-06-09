@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="PartnerNet.Domain" namespace="PartnerNet.Domain">
+  <class name="PurchaseOrder" table="PurchaseOrder" >
+    <id name="Id" type="System.Int32" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="PurchaseOrderType" column="PurchaseOrderType" type="PartnerNet.Domain.PurchaseOrderType, PartnerNet.Domain" not-null="true"/>
+    <property name="PurchaseOrderStatus" column="PurchaseOrderStatus" type="PartnerNet.Domain.PurchaseOrderStatus, PartnerNet.Domain" not-null="true"/>
+    <many-to-one name="Provider" column="ProviderID" class="Provider" cascade="none" />
+    <property name="Date" column="Date" type="System.DateTime" not-null="true"/>
+    <bag name="PurchaseOrderItems" table="PurchaseOrderItem" inverse="true" lazy="true" cascade="all-delete-orphan">
+      <key column="PurchaseOrderID"/>
+      <one-to-many class="PurchaseOrderItem"/>
+    </bag>
+    <property name="WOD" column="WayOfDelivery" type="PartnerNet.Domain.WayOfDelivery, PartnerNet.Domain" not-null="true"/>
+    <!--<property name="CreationUser" column="CreationUser" type="System.Guid" not-null="true"/>
+    <property name="CreationDate" column="CreationDate" type="System.DateTime" not-null="true"/>
+    <property name="ModificationUser" column="ModificationUser" type="System.Guid" not-null="true"/>
+    <property name="ModificationDate" column="ModificationDate" type="System.DateTime" not-null="true"/>-->
+  </class>
+</hibernate-mapping>

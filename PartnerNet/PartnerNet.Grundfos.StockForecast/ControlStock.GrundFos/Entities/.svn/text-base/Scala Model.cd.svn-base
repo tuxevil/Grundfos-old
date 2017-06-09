@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Grundfos.ScalaConnector.PurchaseOrderItem">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Entities\PurchaseOrderItem.cs</FileName>
+      <HashCode>AAACAAAAAgAEAAAABAAAAAQAAAAAAACAAAAAgAAAAgA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PurchaseOrder" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Grundfos.ScalaConnector.Product">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Entities\Product.cs</FileName>
+      <HashCode>QAACAEQACAAmAEoAIgBAAACAAAAAAAAAAAAIAAAACgA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Provider" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Detail" />
+    </ShowAsCollectionAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Grundfos.ScalaConnector.Provider">
+    <Position X="3.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Entities\Provider.cs</FileName>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAgA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Grundfos.ScalaConnector.SaleOrderItem">
+    <Position X="9.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Entities\SaleOrderItem.cs</FileName>
+      <HashCode>AAACAAAAAgAAAAAAAAAAAAAAAAAAAACgAAAAoAAAAgA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SaleOrder" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Grundfos.ScalaConnector.SaleOrder">
+    <Position X="6.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Entities\SaleOrder.cs</FileName>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAgA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Grundfos.ScalaConnector.PurchaseOrder">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Entities\PurchaseOrder.cs</FileName>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAgA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Grundfos.ScalaConnector.ProductDetail">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Entities\ProductDetail.cs</FileName>
+      <HashCode>AAQCAAAEAAAAAAAEAAIABAACgAAAAIAAAAAAAAAAAgA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+</ClassDiagram>

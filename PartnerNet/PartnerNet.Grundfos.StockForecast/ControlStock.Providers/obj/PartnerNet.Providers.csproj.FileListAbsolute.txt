@@ -1,0 +1,10 @@
+C:\Projects\Grundfos\PartnerNet\PartnerNet.Grundfos.StockForecast\ControlStock.Providers\bin\Debug\PartnerNet.Providers.dll
+C:\Projects\Grundfos\PartnerNet\PartnerNet.Grundfos.StockForecast\ControlStock.Providers\bin\Debug\PartnerNet.Providers.pdb
+C:\Projects\Grundfos\PartnerNet\PartnerNet.Grundfos.StockForecast\ControlStock.Providers\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Grundfos\PartnerNet\PartnerNet.Grundfos.StockForecast\ControlStock.Providers\obj\Debug\PartnerNet.Providers.dll
+C:\Projects\Grundfos\PartnerNet\PartnerNet.Grundfos.StockForecast\ControlStock.Providers\obj\Debug\PartnerNet.Providers.pdb
+C:\Projects\Grundfos\PartnerNet\PartnerNet.Grundfos.StockForecast\ControlStock.Providers\bin\Release\PartnerNet.Providers.dll
+C:\Projects\Grundfos\PartnerNet\PartnerNet.Grundfos.StockForecast\ControlStock.Providers\bin\Release\PartnerNet.Providers.pdb
+C:\Projects\Grundfos\PartnerNet\PartnerNet.Grundfos.StockForecast\ControlStock.Providers\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\Grundfos\PartnerNet\PartnerNet.Grundfos.StockForecast\ControlStock.Providers\obj\Release\PartnerNet.Providers.dll
+C:\Projects\Grundfos\PartnerNet\PartnerNet.Grundfos.StockForecast\ControlStock.Providers\obj\Release\PartnerNet.Providers.pdb

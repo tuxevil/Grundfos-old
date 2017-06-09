@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="PartnerNet.Domain" namespace="PartnerNet.Domain">
+  <class name="AlertProduct" table="AlertProduct" >
+    <id name="Id" type="System.Int32" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="ProductCode" column="ProductCode" type="System.String" not-null="true"/>
+    <property name="StandardCost" column="StandardCost" type="System.Double" not-null="true"/>
+    <property name="SubTotal" column="SubTotal" type="System.Double" not-null="true"/>
+    <property name="Quantity" column="Quantity" type="System.Int32" not-null="true"/>
+    <property name="Type" column="Type" type="System.Int32" not-null="true"/>
+    <property name="NegativeDate" column="NegativeDate" type="System.DateTime" not-null="false"/>
+
+  </class>
+  <sql-query name="sp_alertproduct_clean">
+    <return-scalar column="result" type="Int32" />
+    exec sp_alertproduct_clean
+  </sql-query>
+
+</hibernate-mapping>

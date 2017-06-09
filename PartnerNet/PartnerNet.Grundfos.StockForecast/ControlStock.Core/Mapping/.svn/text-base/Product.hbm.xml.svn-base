@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="PartnerNet.Domain" namespace="PartnerNet.Domain">
+  <class name="Product" table="Product" >
+    <id name="Id" type="System.Int32" column="Id">
+      <generator class="identity"/>
+    </id>
+    <bag name="ProductStatisticsWeeklys" table="ProductStatisticWeekly" lazy="true" cascade="none">
+      <key column="ProductID"/>
+      <one-to-many class="ProductStatisticWeekly"/>
+    </bag>
+    <bag name="TransactionHistoryWeeklys" table="TransactionHistoryWeeklyCurrent" lazy="true" cascade="none">
+      <key column="ProductID"/>
+      <one-to-many class="TransactionHistoryWeeklyCurrent"/>
+    </bag>
+    <bag name="ProductStatisticsMonthlys" table="ProductStatisticMonthly" lazy="true" cascade="none">
+      <key column="Id"/>
+      <one-to-many class="ProductStatisticMonthly"/>
+    </bag>
+    <bag name="Forecasts" table="Forecast" lazy="true" cascade="none">
+      <key column="ProductID"/>
+      <one-to-many class="Forecast"/>
+    </bag>
+    <bag name="ProductSets" table="ProductSetRelation" inverse="true" lazy="true">
+      <key column="ProductID"/>
+      <many-to-many class="ProductSet" column="ProductSetID"/>
+    </bag>
+
+    <one-to-one name="ViewScala" class="ProductViewScala" />
+
+    <property name="ProductCode" column="ProductCode" type="System.String" not-null="true" length="50"/>
+    <property name="Description" column="Description" type="System.String" not-null="true" length="50"/>
+    <property name="Group" column="[Group]" type="System.String" not-null="true" length="50"/>
+    <property name="Safety" column="Safety" type="System.Int32" not-null="false"/>
+    <property name="RepositionPoint" column="RepositionPoint" type="System.Int32" not-null="false"/>
+    <property name="RepositionLevel" column="RepositionLevel" type="System.Int32" not-null="false"/>
+    <property name="LeadTime" column="LeadTime" type="System.Int32" not-null="false"/>
+    <many-to-one name="Provider" column="ProviderID" class="Provider" cascade="none" />
+    <property name="AlternativeProduct" column="AlternativeProduct" type="System.String" />
+    <property name="AlternativeDate" column="AlternativeDate" type="System.DateTime" />
+    <property name="CountryCode" column="CountryCode" type="System.String" not-null="false"/>
+  </class>
+</hibernate-mapping>

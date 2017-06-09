@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="PartnerNet.Domain" namespace="PartnerNet.Domain">
+  <class name="Country" table="Country" >
+    <id name="Id" type="System.Int32" column="Id">
+      <generator class="identity"/>
+    </id>
+    <bag name="Providers" table="Provider" lazy="true">
+      <key column="Id"/>
+      <one-to-many class="Provider"/>
+    </bag>
+    <property name="Name" column="Name" type="System.String" not-null="true" length="50"/>
+    <!--<property name="CreationUser" column="CreationUser" type="System.Guid" not-null="true"/>
+    <property name="CreationDate" column="CreationDate" type="System.DateTime" not-null="true"/>
+    <property name="ModificationUser" column="ModificationUser" type="System.Guid" not-null="true"/>
+    <property name="ModificationDate" column="ModificationDate" type="System.DateTime" not-null="true"/>-->
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="PartnerNet.Domain" namespace="PartnerNet.Domain">
+  <class name="ProductRepositionLevelHistory" table="ProductRepositionLevelHistory" >
+    <id name="Id" type="System.Int32" column="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="ProductCode" column="ProductCode" type="System.String" not-null="true"/>
+    <property name="RepositionLevel" column="RepositionLevel" type="System.Int32" not-null="true"/>
+
+    <!--<property name="CreationUser" column="CreationUser" type="System.Guid" not-null="false"/>-->
+    <property name="CreationDate" column="CreationDate" type="System.DateTime" not-null="false"/>
+    <!--<property name="ModificationUser" column="ModificationUser" type="System.Guid" not-null="false"/>
+    <property name="ModificationDate" column="ModificationDate" type="System.DateTime" not-null="false"/>-->
+  </class>
+
+</hibernate-mapping>

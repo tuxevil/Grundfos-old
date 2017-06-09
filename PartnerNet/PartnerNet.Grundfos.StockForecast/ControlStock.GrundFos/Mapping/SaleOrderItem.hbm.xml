@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Grundfos.ScalaConnector" namespace="Grundfos.ScalaConnector">
+  <class name="SaleOrderItem" table="OR030100" >
+    <composite-id>
+      <key-many-to-one name="SaleOrder" column="OR03001" class="SaleOrder" />
+      <key-many-to-one name="Product" column="OR03005" class="Product"  />
+    </composite-id>
+    <many-to-one name="SaleOrder" column="OR03001" class="SaleOrder" />
+    <many-to-one name="Product" column="OR03005" class="Product"  />
+    <property name="Quantity" column="OR03011" type="System.Double" not-null="true"/>
+    <property name="QuantityDelivery" column="OR03012" type="System.Double" not-null="true"/>
+    <property name="DeliveryDate" column="OR03019" type="System.DateTime" not-null="true"/>
+    <property name="SaleOrderId" column="OR03001" type="System.String" not-null="true"/>
+  </class>
+</hibernate-mapping>

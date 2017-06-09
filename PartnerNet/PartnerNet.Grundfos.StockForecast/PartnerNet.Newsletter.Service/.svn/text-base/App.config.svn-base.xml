@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="castle" type="Castle.Windsor.Configuration.AppDomain.CastleSectionHandler, Castle.Windsor"/>
+    <section name="nhibernateSettings" type="ProjectBase.Data.OpenSessionInViewSection, ProjectBase.Data"/>
+    <section name="syscache" type="NHibernate.Caches.SysCache.SysCacheSectionHandler,NHibernate.Caches.SysCache"/>
+  </configSections>
+
+  <castle>
+    <include uri="file://WebCastle.config"/>
+  </castle>
+
+  <nhibernateSettings>
+    <sessionFactories>
+      <clearFactories/>
+      <sessionFactory name="grundfos" factoryConfigPath="WebNHibernate.config" isTransactional="true"/>
+    </sessionFactories>
+  </nhibernateSettings>
+  
+  <system.web>
+
+    <roleManager enabled="true" />
+    <membership defaultProvider="AspNetSqlMembershipProvider" userIsOnlineTimeWindow="30">
+      <providers>
+        <clear/>
+        <add name="AspNetSqlMembershipProvider" type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" connectionStringName="LocalSqlServer"  enablePasswordRetrieval="false" enablePasswordReset="true" applicationName="StockForecast"  requiresQuestionAndAnswer="true" requiresUniqueEmail="false" passwordFormat="Hashed" maxInvalidPasswordAttempts="5" passwordAttemptWindow="10" passwordStrengthRegularExpression="" minRequiredPasswordLength="4" minRequiredNonalphanumericCharacters="0"/>
+      </providers>
+    </membership>
+  </system.web>
+  <system.net>
+  <mailSettings>
+    <smtp from="donotreply@nybblegroup.com">
+      <network host="192.168.1.12" port="25"/>
+    </smtp>
+  </mailSettings>
+</system.net>
+
+<connectionStrings>
+  <clear/>
+  <add name="LocalSqlServer" connectionString="data source=dbserver;User ID=grundfos;Password=grundfos;database=Grundfos_StockForecast;Connection Timeout=600"/>
+</connectionStrings>
+
+<appSettings>
+  <add key="TimeSlice" value="36000"/>
+  <add key="SiteURL" value="http://qa.stock.grundfos.app.nybblenetwork.com"/>
+  <add key="SupportEmail" value="sebastian.real@nybblegroup.com"/>
+</appSettings>
+  
+</configuration>
+
+
+
